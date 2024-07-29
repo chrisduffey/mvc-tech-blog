@@ -1,12 +1,12 @@
-const Sequelize = require ("sequelize");
-
-require("donenv").config();
+require('dotenv').config(); 
+const Sequelize = require("sequelize");
 
 let sequelize;
 
-
-if (process.env.DB_URL) {
-  sequelize = new Sequelize(process.env.DB_URL);
+if (process.env.DATABASE_URL) {  
+  sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialect: 'postgres',
+  });
 } else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
@@ -14,7 +14,7 @@ if (process.env.DB_URL) {
     process.env.DB_PASSWORD,
     {
       host: 'localhost',
-      dialect: 'postgres'
+      dialect: 'postgres',
     }
   );
 }
