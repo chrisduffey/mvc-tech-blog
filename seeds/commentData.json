@@ -1,0 +1,32 @@
+[
+    {
+        "comment_body": "Devlopers can never be replaced",
+        "date_created": "June 15, 2024",
+        "user_id": "2",
+        "blogPost_id":1
+    },
+    {
+        "comment_body": "OMG sign me up",
+        "date_created": "October 23, 2023",
+        "user_id": "5",
+        "blogPost_id":2
+    },
+    {
+        "comment_body": "Our prayers are answered",
+        "date_created": "November 11, 2023",
+        "user_id": "6",
+        "blogPost_id":2
+    },
+    {
+        "comment_body": "I never want to see an office again",
+        "date_created": "May 30, 2022",
+        "user_id": "4",
+        "blogPost_id":3
+    },
+    {
+        "comment_body": "I could see AI replacing some things but not all",
+        "date_created": "June 5, 2024",
+        "user_id": "6",
+        "blogPost_id":1
+    }
+]

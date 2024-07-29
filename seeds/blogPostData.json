@@ -1,0 +1,21 @@
+[
+    {
+        "title": "AI taking your job?",
+        "description": "There is a paradigm in the tech industry on the horizion but its not the overlord everyone thinks it will be",
+        "date_created": "June 1, 2024",
+        "user_id": 1
+    },
+    {
+        "title": "New breakthroughs for developers and many others that struggle with dsylexia",
+        "description": "There is a new font format that helps readers with dsylexia follow along and shorten down reading times drastically",
+        "date_created": "September 14, 2023",
+        "user_id": 2
+
+    },
+    {
+        "title": "The future view of office enviroments",
+        "description": "With commercial real estate struggling to find its footing many companies look to move workers to remote or hybrid rolls in shared locations",
+        "date_created": "May 5, 2022",
+        "user_id": 3
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "name":"Frank Costanza",
+        "email": "serinitynow@yahoo.com",
+        "password": "password123"
+    },
+    {
+        "name":"Jerry Seinfeld",
+        "email": "funnyman@gmail.com",
+        "password": "password321"
+    },
+    {
+        "name":"Cosmo Kramer",
+        "email": "assman74@hotmail.com",
+        "password": "password456"
+    }
+]
