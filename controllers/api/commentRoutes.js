@@ -5,7 +5,7 @@ router.post("/", async (req, res) => {
     try{
         console.log("success");
         const comment = await Comment.create({
-            comment_body: req.body.comment_body,
+            comment_content: req.body.comment_content,
             blogPost_id: req.body.blogPost_id,
             user_id: req.session.user_id || req.body.user_id,
         });
@@ -37,7 +37,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-router.put("/", async (req, res) => {
+router.put("/:id", async (req, res) => {
     try{
         const updatedComment = await Comment.update(req.body, {
             where:{

@@ -1,17 +1,17 @@
 async function newCommentHandler(event) {
     event.preventDefault();
 
-    const comment_body = document.getElementById("comment").value.trim();
+    const comment_content = document.getElementById("comment").value.trim();
 
     const url = window.location.toString().split("/");
     const blogPost_id = url[url.length - 1];
 
-    if (comment_body) {
+    if (comment_content) {
         const response = await fetch("/api/comment", {
             method: "POST",
             body: JSON.stringify({
                 blogPost_id,
-                comment_body,   
+                comment_content,   
             }),
             headers: {
                 "Content-Type": "application/json",

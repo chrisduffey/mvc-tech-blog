@@ -5,13 +5,13 @@ header {
   }
   
   body {
-    background-color: #a28089;
+    background-color: #814ff7;
   }
   
   h1 {
     font-family: "Jomolhari", serif;
-    background-color: teal;
-    color: #ffb3c6;
+    background-color: tan;
+    color: cyan;
     padding: 16px;
     margin-bottom: 5px;
   }
@@ -23,7 +23,7 @@ header {
   main {
     font-family: "Jomolhari", serif;
     margin-top: -5px;
-    background-color: #a28089;
+    background-color: #814ff7;
   }
   
   .homepage-main {
@@ -41,11 +41,11 @@ header {
   /* Nav styles */
   
   .navBar {
-    background-color: #00a0a0;
+    background-color: tan;
   }
   
   #logout {
-    background-color: #84a59d;
+    background-color: darkgreen;
   }
   
   /* Input/textarea styles */

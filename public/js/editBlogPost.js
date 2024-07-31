@@ -4,7 +4,7 @@ const editPost = async (event) => {
     event.preventDefault();
 
 
-    const comment_body = document.getElementById("editBtn").ariaValueMax.trim();
+    const comment_content = document.getElementById("editBtn").value.trim();
 
     document.location.assign(`/create/${blogPost[2]}`);
 };

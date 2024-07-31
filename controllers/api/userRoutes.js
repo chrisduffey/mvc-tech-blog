@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
 
 router.post("/login", async (req, res) => {
     try {
-        const userData = await User.findone({where: {email: req.body.email}});
+        const userData = await User.findOne({where: {email: req.body.email}});
 
         if(!userData) {
             console.log("no user found");
@@ -26,15 +26,15 @@ router.post("/login", async (req, res) => {
             return;
         }
 
-        const password= await userData.checkPassword(req.body.password);
+        const validPassword= await userData.checkPassword(req.body.password);
 
-        if (!password) {
+        if (!validPassword) {
             console.log("password does not match");
             res.status(400).json({message: "The email or password you have used is invalid."});
             return;
         }
         req.session.save(() => {
-            req.seesion.user_id =userData.id;
+            req.session.user_id =userData.id;
             req.session.logged_in =true;
             
             res.json({user: userData, message: "Welcome !!"});
