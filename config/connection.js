@@ -1,5 +1,6 @@
-require('dotenv').config(); 
+
 const Sequelize = require("sequelize");
+require('dotenv').config(); 
 
 let sequelize;
 
@@ -15,6 +16,7 @@ if (process.env.DATABASE_URL) {
     {
       host: 'localhost',
       dialect: 'postgres',
+      
     }
   );
 }
