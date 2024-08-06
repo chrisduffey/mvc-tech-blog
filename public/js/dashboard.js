@@ -32,6 +32,6 @@ for (let i=0; i< editButton.length; i++) {
 }
 const deleteButton= document.querySelectorAll("#deleteBtn");
 
-for (let i=0; i< deleteButtonButton.length; i++) {
-    deleteButton[i].addEventListener("click", deletePostHandlerPost);
+for (let i=0; i< deleteButton.length; i++) {
+    deleteButton[i].addEventListener("click", deletePostHandler);
 }

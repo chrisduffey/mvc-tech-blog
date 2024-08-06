@@ -24,24 +24,44 @@ router.post('/login', async (req, res) => {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
-      return res.status(400).json({ message: 'The email or password you have used is invalid.' });
+      console.log("no user");
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
     }
 
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      return res.status(400).json({ message: 'The email or password you have used is invalid.' });
+      console.log("invalid password");
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
     }
 
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-
-      res.json({ user: userData, message: 'Welcome!' });
+      
+      res.json({ user: userData, message: 'You are now logged in!' });
     });
+
   } catch (err) {
-    console.error('Error logging in:', err);
-    res.status(400).json({ message: 'Failed to log in. Please check your credentials and try again.' });
+    console.log(err);
+    res.status(400).json(err);
+  }
+});
+
+
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
 });
 
