@@ -24,7 +24,13 @@
    Then they can comment on other blog post made by other users ,
    When the user is done they can simply log out.
   ## Use
-  
+  Git Hub Repo
+https://github.com/chrisduffey/mvc-tech-blog
+  Live URL
+https://mvc-tech-blog-0q2g.onrender.com/
+
+
+
   ## License
 This project is licensened under the MIT license.
   ## Contact Info
